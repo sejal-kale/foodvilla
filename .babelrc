@@ -1,5 +1,16 @@
+// with options
+// {
+//     "plugins": [ ["transform-remove-console" , {
+//         "exclude" : ["log"]
+//         }
+//     ]]
+// }
+//no options
 {
-  "presets": [["@babel/preset-env", {"targets": {"node": "current"}}]] 
-  
-  }
+  "plugins": [
+      [
+          "transform-remove-console"
+      ]
+  ]
+}
 
