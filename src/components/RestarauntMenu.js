@@ -18,9 +18,9 @@ const RestarauntMenu = () => {
   const [restaurant, menuItems] = useRestaurant(id);
   console.log(menuItems)
 
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
-  const handleAddItem=(item)=>{
+  const handleAddItem = (item) => {
     dispatch(addItem(item))
   }
 
@@ -40,13 +40,13 @@ const RestarauntMenu = () => {
 
 
       <div className='relative left-64 border-t-3 border-black '>
-       
-      <h1 className='font-bold text-2xl m-4' >Recommended</h1>
-          <h1 className='text-gray-400 text-2xl m-3' >{menuItems.length} ITEMS</h1>
-        
-          
 
-        <ul  className='m-3'>{
+        <h1 className='font-bold text-2xl m-4' >Recommended</h1>
+        <h1 className='text-gray-400 text-2xl m-3' >{menuItems.length} ITEMS</h1>
+
+
+
+        <ul className='m-3'>{
 
           menuItems.map((item) =>
             <>
@@ -60,10 +60,10 @@ const RestarauntMenu = () => {
                 <div className='m-7'>
                   <img className='' src={MENU_ITEM_IMF_URL + item.imageId}></img>
                   <button className='bg-green-700  p-3 border-2 rounded-md text-white hover:bg-green-600'
-                  onClick={()=> handleAddItem(item)} >ADD +</button>
+                    onClick={() => handleAddItem(item)} >ADD +</button>
                 </div>
 
-             
+
               </div>
 
             </>
@@ -71,7 +71,7 @@ const RestarauntMenu = () => {
           )
         }
         </ul>
-       
+
       </div>
 
     </div>
