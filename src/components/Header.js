@@ -55,7 +55,7 @@ const Header = () => {
           Logout
         </button>
       ) : (
-        <Link to="/login"><button className="login-btn p-5 m-2">
+        <Link to="/login"><button className="login-btn p-2 relative top-5 m-2 text-white border-2">
           Login
         </button>
         </Link>

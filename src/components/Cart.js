@@ -53,6 +53,16 @@ const Cart = () => {
         dispatch(clearCart());
     };
 
+    const handleCheckout = () => {
+
+
+        // Alternatively, you can display a confirmation message
+        alert('Checkout completed! Thank you for your order.');
+
+        // You can also clear the cart or perform any other necessary actions
+        dispatch(clearCart());
+    };
+
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2) / 100;
     };
@@ -86,7 +96,7 @@ const Cart = () => {
                         <hr className="my-3" />
                         <div className="flex justify-between font-semibold">
                             <p>Total:</p>
-                            <p>₹ {(parseFloat(calculateTotal()) + 3.99).toFixed(2)}</p>
+                            <p>₹ {(parseFloat(calculateTotal()) + 20).toFixed(2)}</p>
                         </div>
                     </div>
 
@@ -96,6 +106,13 @@ const Cart = () => {
                             onClick={() => handleClearCart()}
                         >
                             Clear Cart
+                        </button>
+                        {/* Checkout button */}
+                        <button
+                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline"
+                            onClick={() => handleCheckout()}
+                        >
+                            Checkout
                         </button>
                     </div>
                 </div>

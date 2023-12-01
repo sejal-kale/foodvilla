@@ -1,12 +1,13 @@
 import React from 'react'
+import { MENU_ITEM_IMF_URL } from '../constant';
 
-const cartItem = ({ category, description, price, imageId }) => {
+
+const cartItem = ({ name, category, description, price, imageId }) => {
     return (
 
-        <div className="w-60  p-4   hover:p-3 m-2 shadow rounded-md ">
-            <img className="rounded-md h-10 m-auto w-8" src={MENU_ITEM_IMF_URL + imageId}></img>
-            <h2 className="font-bold text-xl">{category}</h2>
-            <h3 className="font-light text-sm">{description}</h3>
+        <div className="w-full m-auto p-4   hover:p-3  shadow rounded-md  flex-col">
+            <img className="rounded-md h-10  w-10" src={MENU_ITEM_IMF_URL + imageId}></img>
+            <h2 className="font-bold text-xl">{name}</h2>
             <h4 className="font-bold">{"₹" + price / 100} </h4>
 
         </div>
